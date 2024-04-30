@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
+    //    public static String NEW_LINE = System.lineSeparator();
     private int id;
     private static int nextId = 1;
 
@@ -95,5 +96,30 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    @Override
+    public String toString() {
+        if (name.isEmpty()) {
+            name = "Data not available";
+        }
+        if (employer.getValue().isEmpty()) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().isEmpty()) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().isEmpty()) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().isEmpty()) {
+            coreCompetency.setValue("Data not available");
+        }
+        return System.lineSeparator() + "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: " + coreCompetency + System.lineSeparator();
     }
 }
