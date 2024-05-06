@@ -26,16 +26,15 @@ public abstract class JobField {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(getId());
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof JobField jobField)) return false;
+        return getId() == jobField.getId() && Objects.equals(getValue(), jobField.getValue());
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PositionType that = (PositionType) o;
-        return id == that.id;
+    public int hashCode() {
+        return Objects.hash(getId(), getValue());
     }
 
     // Getters and Setters
