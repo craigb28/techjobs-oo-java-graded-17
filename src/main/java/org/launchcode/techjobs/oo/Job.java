@@ -8,6 +8,8 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
+    public static String newLine = System.lineSeparator();
+
     private String name;
     private Employer employer;
     private Location location;
@@ -115,11 +117,11 @@ public class Job {
         if (coreCompetency.getValue().isEmpty()) {
             coreCompetency.setValue("Data not available");
         }
-        return System.lineSeparator() + "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer + "\n" +
-                "Location: " + location + "\n" +
-                "Position Type: " + positionType + "\n" +
-                "Core Competency: " + coreCompetency + System.lineSeparator();
+        return newLine + "ID: " + id + newLine +
+                "Name: " + name + newLine +
+                "Employer: " + employer + newLine +
+                "Location: " + location + newLine +
+                "Position Type: " + positionType + newLine +
+                "Core Competency: " + coreCompetency + newLine;
     }
 }
