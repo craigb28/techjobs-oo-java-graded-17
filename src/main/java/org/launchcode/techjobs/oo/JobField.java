@@ -28,8 +28,8 @@ public abstract class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof JobField jobField)) return false;
-        return getId() == jobField.getId() && Objects.equals(getValue(), jobField.getValue());
+        if (!(o instanceof JobField jf)) return false;
+        return getId() == jf.getId();
     }
 
     @Override
@@ -50,5 +50,4 @@ public abstract class JobField {
     public void setValue(String value) {
         this.value = value;
     }
-
 }

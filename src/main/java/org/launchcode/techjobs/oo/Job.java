@@ -8,7 +8,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    public static String newLine = System.lineSeparator();
+    public static String NEW_LINE = System.lineSeparator();
 
     private String name;
     private Employer employer;
@@ -117,11 +117,11 @@ public class Job {
         if (coreCompetency.getValue().isEmpty()) {
             coreCompetency.setValue("Data not available");
         }
-        return newLine + "ID: " + id + newLine +
-                "Name: " + name + newLine +
-                "Employer: " + employer + newLine +
-                "Location: " + location + newLine +
-                "Position Type: " + positionType + newLine +
-                "Core Competency: " + coreCompetency + newLine;
+        return NEW_LINE + "ID: " + id + NEW_LINE +
+                "Name: " + name + NEW_LINE +
+                "Employer: " + employer + NEW_LINE +
+                "Location: " + location + NEW_LINE +
+                "Position Type: " + positionType + NEW_LINE +
+                "Core Competency: " + coreCompetency + NEW_LINE;
     }
 }
